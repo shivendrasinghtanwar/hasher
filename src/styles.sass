@@ -8,23 +8,34 @@
         font-family: 'Titillium Web', sans-serif
 
 
-    body
-        margin: 0
-        box-sizing: border-box
+    html
+        height: 100%
 
+    body
+        height: 100%
+        margin: 0
+        display: block
+
+    .container
+        display: flex
+        direction: row
     app-root
         width: 100%
-        box-sizing: border-box
-        display: flex
-        flex-direction: row
-        justify-content: space-between
 
     app-top-bar
         width: 100%
         color: $font-color
         background-color: $primary-color
-        font-size: 20px
+        font-size: 30px
         padding-left: 10px
+        display: flex
+        flex-direction: row
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6)
+        -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6)
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6)
+        z-index: 999
+        position: fixed
+        top: 0
 
     app-top-bar h2
         margin: 0px
@@ -35,3 +46,14 @@
 
     app-top-bar a:hover
         opacity: 0.8
+
+    app-side-bar
+        background: $primary-color
+        color: $font-color
+        width: 25%
+        height: 100%
+        padding-left: 10px
+        z-index: -100
+        font-size: 20px
+        font-weight: 500
+        // border-top: solid 2px $font-color
