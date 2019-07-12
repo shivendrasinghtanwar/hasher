@@ -1,3 +1,8 @@
-<app-side-bar-menu [record]="menuItem" *ngFor="let menuItem of menuItemList"></app-side-bar-menu>
+<app-side-bar-menu 
+[record]="menuItem"
+*ngFor="let menuItem of menuItemList;let i = index"
+(click)="changeMenuAndReturnToViewWindow(menuItem)"
+  >
+</app-side-bar-menu>
 
     

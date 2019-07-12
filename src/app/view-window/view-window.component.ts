@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TitleShareService } from "../services/title-share.service";
 
 @Component({
   selector: 'app-view-window',
@@ -7,10 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ViewWindowComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private titleService:TitleShareService
+  ) { }
 
   @Input() menuItemList
+  menuItem:any
   ngOnInit() {
+    this.titleService.currentMenuItem.subscribe(
+      record => this.menuItem = record
+    )
   }
 
 }
