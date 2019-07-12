@@ -8,8 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class SideBarComponent implements OnInit {
 
   constructor() { }
-
+  menuItemList = [
+    {
+      'title':'SHA-256'
+    },
+    {
+      'title':'MD-5'
+    },
+    {
+      'title':'SHA-64'
+    }
+  ]
   ngOnInit() {
+    
   }
 
 }
