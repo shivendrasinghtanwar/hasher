@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-view-window',
@@ -9,6 +9,7 @@ export class ViewWindowComponent implements OnInit {
 
   constructor() { }
 
+  @Input() menuItemList
   ngOnInit() {
   }
 

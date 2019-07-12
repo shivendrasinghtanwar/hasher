@@ -1,7 +1,7 @@
 
 <app-top-bar></app-top-bar>
 <div class="outerContainer">
-  <app-side-bar></app-side-bar>
-  <app-view-window></app-view-window>
+  <app-side-bar [menuItemList]="menuItemList" ></app-side-bar>
+  <app-view-window [menuItemList]="menuItemList" ></app-view-window>
 <router-outlet></router-outlet>
 </div>
